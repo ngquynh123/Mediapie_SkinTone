@@ -34,7 +34,7 @@ ENV/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-*.ipynb
+# *.ipynb  # Uncomment để không push notebooks
 
 # IDE
 .vscode/
