@@ -20,7 +20,6 @@ SKINTONE/
 │   ├── extract_face_gray.py         # Trích xuất khuôn mặt (nền xám)
 │   ├── lab_cheek_chin_data.py       # Xử lý dữ liệu LAB
 │   ├── skin_tone_labeler.py         # Gán nhãn tông màu da
-│   ├── augment_Type1.py             # Data augmentation
 │   ├── LAB.py                       # Phân tích LAB color space
 │   ├── gop_cheek_chin.ipynb         # Notebook: Gộp vùng má & cằm
 │   ├── landmarks.ipynb              # Notebook: Phân tích landmarks
@@ -153,13 +152,8 @@ Dự án cung cấp **8 model variants**:
 
 | Model                                 | Mô tả                           |
 | ------------------------------------- | ------------------------------- |
-| `mobilenetv2_best.pth`                | Base model                      |
 | `mobilenetv2_best_cheek_chin.pth`     | Train trên vùng má + cằm        |
-| `mobilenetv2_best_skin.pth`           | Train trên toàn bộ da mặt       |
-| `mobilenetv2_best_final.pth`          | Final optimized version         |
 | `mobilenetv2_best_albu.pth`           | Với Albumentations augmentation |
-| `mobilenetv2_best_f.pth`              | Fine-tuned variant              |
-| `mobilenetv2_best_cheek.pth`          | Chỉ vùng má                     |
 | `mobilenetv2_best_cheek_chin_new.pth` | Version mới nhất                |
 
 ## 🎯 Phương pháp phân loại
