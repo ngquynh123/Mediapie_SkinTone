@@ -1,5 +1,5 @@
-# Model weights (file .pth rất lớn)
-*.pth
+# Model weights (uncomment nếu không muốn push)
+# *.pth
 
 # Training history và kết quả
 *.json
