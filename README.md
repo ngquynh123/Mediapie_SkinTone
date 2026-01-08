@@ -21,12 +21,18 @@ SKINTONE/
 │   ├── lab_cheek_chin_data.py       # Xử lý dữ liệu LAB
 │   ├── skin_tone_labeler.py         # Gán nhãn tông màu da
 │   ├── augment_Type1.py             # Data augmentation
-│   └── LAB.py                       # Phân tích LAB color space
+│   ├── LAB.py                       # Phân tích LAB color space
+│   ├── gop_cheek_chin.ipynb         # Notebook: Gộp vùng má & cằm
+│   ├── landmarks.ipynb              # Notebook: Phân tích landmarks
+│   ├── skin_tone_value_lab.ipynb    # Notebook: Giá trị LAB của skin tone
+│   └── xoay.ipynb                   # Notebook: Xử lý xoay ảnh
 │
 ├── public/                  # Training & Inference
 │   ├── mobilenetV2.py               # Training script chính
 │   ├── train_test_val.py            # Chia dữ liệu train/val/test
-│   └── loc.py                       # Lọc ảnh theo LAB distance
+│   ├── loc.py                       # Lọc ảnh theo LAB distance
+│   ├── cheek_chin_test.ipynb        # Notebook: Test & đánh giá model
+│   └── quangtham.ipynb              # Notebook: Phân tích thêm
 │
 ├── mobilenetv2_best_*.pth   # Trained models (8 variants)
 └── .gitignore
@@ -114,6 +120,8 @@ python public/mobilenetV2.py
 
 ### 3️⃣ Đánh giá & Inference
 
+**Python Script:**
+
 ```python
 # Load model
 model = mobilenet_v2(weights=MobileNet_V2_Weights.DEFAULT)
@@ -130,6 +138,14 @@ model.eval()
 # Predict
 # ... (xem code trong public/mobilenetV2.py)
 ```
+
+**Jupyter Notebook:**
+
+- Xem chi tiết trong `public/cheek_chin_test.ipynb` để:
+  - Load và test model
+  - Vẽ confusion matrix
+  - Xem training history (accuracy/loss curves)
+  - Test trên nhiều ảnh với visualization
 
 ## 📁 Trained Models
 
@@ -174,6 +190,12 @@ Dự đoán từ 3 vùng (má trái, má phải, cằm) → chọn kết quả p
 - Training accuracy: ~85-90%
 - Validation accuracy: ~80-85%
 - Test accuracy: ~75-80%
+
+📓 **Xem chi tiết kết quả trong các Jupyter Notebooks:**
+
+- `public/cheek_chin_test.ipynb` - Đánh giá model với confusion matrix
+- `pre_processing/skin_tone_value_lab.ipynb` - Phân tích giá trị LAB
+- `pre_processing/landmarks.ipynb` - Kiểm tra landmarks trích xuất
 
 ## 🔧 Tùy chỉnh
 
