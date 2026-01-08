@@ -1,0 +1,52 @@
+# Model weights (file .pth rất lớn)
+*.pth
+
+# Training history và kết quả
+*.json
+*.csv
+
+# Thư mục dữ liệu (ảnh training/test)
+public/data/
+public/data_*/
+public/test*/
+public/debug_combined/
+public/md/
+public/skin tone values/
+pre_processing/data*/
+pre_processing/cheek_chin_combined/
+pre_processing/combined_new/
+pre_processing/debug_overlay*/
+pre_processing/lech_mau/
+pre_processing/output_*/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
